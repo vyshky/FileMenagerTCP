@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileMenagerTCP", "FileMenager3\FileMenagerTCP.csproj", "{407FB35F-1FB7-4871-9910-448924AB62AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Dsl\Model.csproj", "{F99F39EA-B3FA-4ED2-9A7E-0E6E16266036}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{EE2575FF-93B0-4C75-8CB5-2CD76117718B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{407FB35F-1FB7-4871-9910-448924AB62AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{407FB35F-1FB7-4871-9910-448924AB62AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{407FB35F-1FB7-4871-9910-448924AB62AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{407FB35F-1FB7-4871-9910-448924AB62AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99F39EA-B3FA-4ED2-9A7E-0E6E16266036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99F39EA-B3FA-4ED2-9A7E-0E6E16266036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99F39EA-B3FA-4ED2-9A7E-0E6E16266036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99F39EA-B3FA-4ED2-9A7E-0E6E16266036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE2575FF-93B0-4C75-8CB5-2CD76117718B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2575FF-93B0-4C75-8CB5-2CD76117718B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2575FF-93B0-4C75-8CB5-2CD76117718B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2575FF-93B0-4C75-8CB5-2CD76117718B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05980E17-E07F-422B-9E0F-0D1A484CBF10}
+	EndGlobalSection
+EndGlobal
