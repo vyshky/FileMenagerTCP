@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Model;
 
 namespace Model
 {
     public class Sender
     {
+
+
+        private void Execute(Package method)
+        {
+            // TODO :: сделать проверку на метод и выполнить в зависимости этого метод
+        }
     }
 }

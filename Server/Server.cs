@@ -1,9 +1,6 @@
-﻿using Dsl;
-using Model;
-using Newtonsoft.Json;
+﻿using Model;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
 
 namespace Server
 {
@@ -21,10 +18,16 @@ namespace Server
             {
                 client = listener.AcceptTcpClient();  // ждет подключения клиента // Пока не подключится клиент дальше шаги выполнятся не будут
                 Console.WriteLine("Подключение создано");
-                Thread thread = new Thread(new ParameterizedThreadStart(listen.StartListener));
+                Thread thread = new Thread(new ParameterizedThreadStart(Listener));
                 thread.Start(client);
             }
-        } 
+        }
+    
+        public void Listener(object client)
+        {
+            listen.StartListener((TcpClient)client);
+        }
+
 
     }
     
