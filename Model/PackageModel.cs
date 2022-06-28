@@ -1,6 +1,6 @@
 ﻿namespace Model
 {
-    public class PackageModel
+    public static class PackageModel
     {
 
         private static Dictionary<string, Action> dictionary = new Dictionary<string, Action>();
@@ -11,7 +11,7 @@
             dictionary.Add("post", Post);
         }
 
-        public void Create()
+        public static void Create(string path)
         {
             //value = value.ToLower();
             //if (dictionary.Contains(value))

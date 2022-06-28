@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dsl\Model.csproj" />
+    <ProjectReference Include="..\Model\Model.csproj" />
   </ItemGroup>
 
 </Project>

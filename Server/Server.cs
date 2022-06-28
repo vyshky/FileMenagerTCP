@@ -6,14 +6,16 @@ namespace Server
 {
     public sealed class ServerModel
     {
-        static TcpClient client = new TcpClient();
+        static TcpClient client;
               
         static TcpListener listener = new TcpListener(IPAddress.Any, 8888);
         Listener listen = new Listener();
         public ServerModel() { }
 
         public void Start()
-        {
+        {           
+            listener = new TcpListener(IPAddress.Any, 8888);
+            listener.Start();
             while (true)
             {
                 client = listener.AcceptTcpClient();  // ждет подключения клиента // Пока не подключится клиент дальше шаги выполнятся не будут

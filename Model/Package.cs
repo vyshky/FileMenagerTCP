@@ -6,7 +6,8 @@ namespace Model
     {
         public string Method { get; set; }
         public string Name { get; set; }
-        public int Length { get => 64000; }
+        public int Length { get; set; }
+        public int Bandwidth { get => 64000; }
         public byte[] Data { get; set; }
 
         public string GetJson()

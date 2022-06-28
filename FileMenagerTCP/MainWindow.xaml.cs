@@ -8,7 +8,7 @@ using System.Windows.Media;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using Newtonsoft.Json;
 using System.Threading;
-using Dsl;
+using Model;
 
 namespace FileMenager3
 {    
@@ -52,12 +52,13 @@ namespace FileMenager3
         private void FormClickButtonUpload(object sender, RoutedEventArgs e)
         {
             if (path == null) return;
-            Pakage file = new Pakage();
+            Package file = new Package();
 
             ////// Инициализируем file
             int index = path.LastIndexOf('\\');
             file.Name = path.Remove(0, index + 1); // удаляет  от 0 до индекса
             file.Data = File.ReadAllBytes(path);
+            file.Method = "post";
             file.Length = file.Data.Length;
             /////////////////////////////////////////////           
 
@@ -78,10 +79,10 @@ namespace FileMenager3
             Thread thread = new Thread(ListenerDownLoad);
             thread.Start();
 
-            Pakage file = new Pakage();
+            Package file = new Package();
             file.Method = "Download";
             file.Name = "";
-            file.Length = 1;
+            //file.Bandwidth = 1;
             file.Data = new byte[1] { 1 };
 
             string jsonObject = file.GetJson();
@@ -126,8 +127,8 @@ namespace FileMenager3
                 }
             }
 
-            Pakage file = new Pakage();
-            file = JsonConvert.DeserializeObject<Pakage>(json);
+            Package file = new Package();
+            file = JsonConvert.DeserializeObject<Package>(json);
 
             if (file == null)
             {
