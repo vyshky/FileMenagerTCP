@@ -1,45 +1,29 @@
 ﻿namespace Model
 {
-    public static class PackageModel
+    public class PackageModel
     {
-
-        private static Dictionary<string, Action> dictionary = new Dictionary<string, Action>();
-
-        private static void Init()
+        private Dictionary<string, Action> dictionary = new Dictionary<string, Action>();
+        private Package package = new Package();
+      
+        public PackageModel()
         {
             dictionary.Add("get", Get);
             dictionary.Add("post", Post);
         }
-
-        public static void Create(string path)
+        public void Execute(Package _package)
         {
-            //value = value.ToLower();
-            //if (dictionary.Contains(value))
-            //{
-            //    method = value;
-            //}
-            //else throw new Exception($"Справочник не содержит метод - {value}");
+            package = _package ?? throw new ArgumentNullException("");
+            Action execMethod = dictionary[package.Method];
+            execMethod();
         }
 
-        public static void Execute(Package package)
+        public void Get()
         {
-            _ = package ?? throw new ArgumentNullException("");
-
-            if (dictionary.ContainsKey(package.Method))
-            {
-                Action execMethod = dictionary[package.Method];
-                execMethod();
-            }
+            Console.WriteLine("GET method вызван");
         }
-
-
-        public static void Get()
+        public void Post()
         {
-            Console.WriteLine("");
-        }
-        public static void Post()
-        {
-            Console.WriteLine("");
+            Console.WriteLine("POST method вызван");
         }
     }
 }

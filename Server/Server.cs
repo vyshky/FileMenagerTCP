@@ -7,13 +7,13 @@ namespace Server
     public sealed class ServerModel
     {
         static TcpClient client;
-              
+
         static TcpListener listener = new TcpListener(IPAddress.Any, 8888);
         Listener listen = new Listener();
         public ServerModel() { }
 
         public void Start()
-        {           
+        {
             listener = new TcpListener(IPAddress.Any, 8888);
             listener.Start();
             while (true)
@@ -24,12 +24,11 @@ namespace Server
                 thread.Start(client);
             }
         }
-    
+
         public void Listener(object client)
         {
             listen.StartListener((TcpClient)client);
         }
-
 
     }
     

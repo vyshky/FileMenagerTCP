@@ -12,7 +12,7 @@ namespace Model
 
         public string GetJson()
         {
-            if (Name == null || Data.Length == 0 || Method == null || Data == null)
+            if (Name == null || Method == null)
             {
                 throw new Exception("Файл отсутствует");
             }
