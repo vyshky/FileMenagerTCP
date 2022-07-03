@@ -8,7 +8,7 @@ namespace Model
     {
         static NetworkStream networkStream;
         static List<TcpClient> clients = new List<TcpClient>();
-        PackageModel pModel = new PackageModel(messageTarget);
+        static PackageModel pModel = new PackageModel();
         public void StartListener(TcpClient client)
         {
             clients.Add(client);
